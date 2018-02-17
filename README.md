@@ -6,13 +6,15 @@ Last semester, I heard how the NYUAD Orchestra is looking for an interactive log
 
 Clone the project from Github, and install express in the project folder
 
-'''
+```
 npm install express
-'''
+```
+```
 The run the server
-'''
+```
+```
 node server.js
-'''
+```
 
 Navigate to localhost:8080, allow webcamera access, scroll to the bottom of the page. There you find the machine elarning dashboard for training and running. To run, click load (to load a previously trained model) then click run. You're good to go.
 
