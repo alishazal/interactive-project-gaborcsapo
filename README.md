@@ -9,9 +9,9 @@ Clone the project from Github, and install express in the project folder
 ```
 npm install express
 ```
-```
+
 The run the server
-```
+
 ```
 node server.js
 ```
