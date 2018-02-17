@@ -1,0 +1,78 @@
+body{
+	font-family: Tahoma, Geneva, sans-serif;
+}
+
+#mycanvas {
+	height: 640px;
+	position: absolute;
+
+	left: 50%;
+}
+#squares {
+	position: absolute;
+	top: 10%;
+	left: 5%;
+
+}
+
+#container{
+	background-color: #fff; 
+	z-index: 0;
+	height: 80%
+}
+
+#header{
+	position: relative;
+	top: -10px;
+	height: 10%;
+	left: -10px;
+	width: 110%;
+	background-color: #a41120;
+	text-align: right;
+}
+
+#logo{
+	top: 10%;
+	width: 100%;
+}
+
+#content{
+	text-align: center;
+}
+
+li{
+	display:inline;
+	padding: 10px;
+}
+ul{
+	color: white;
+	position: relative;
+	list-style-type: none;
+    margin: 0;
+    top: 10px;
+    right: 100px;
+}
+
+rect{
+	fill:black;
+}
+svg{
+	display: inline-block;
+}
+
+.gray{
+	background-color: lightgrey;
+	padding: 50px;
+}
+canvas{
+	transform: translate(-25%, -25%);
+	transform: scale(0.5);
+
+}
+
+#instructions{
+	width: 100px;
+	position: absolute;
+	right: 20%;
+	bottom: 200px;
+}

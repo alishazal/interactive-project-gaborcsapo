@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Orchestra Logo</title>
+        <script src="libs/p5/p5.js"></script>
+        <script src="libs/p5/addons/p5.dom.js"></script>
+        <script src="libs/utils.js"></script>
+        <script type="text/javascript" src="libs/jquery/jquery-3.2.1.min.js"></script>
+        <script src="libs/Tone.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+
+    <body>
+        
+        
+        <div id="container">
+            <div id="header">
+                <img src="http://www.nyuad-artscenter.org/themes/nyuad/static/images/logo-center.svg" style="height: 70%; padding: 15px; float: left">   
+                <ul>
+                    <li>Events</li>
+                    <li>About</li>
+                    <li>News & Blog</li>
+                    <li>Visit</li>
+                </ul>            
+            </div>
+
+            <div id="logo">
+                <div id="mycanvas"></div>
+                <div id="instructions">
+                    <img style="width: 100px;" src="assets/conductor.jpg">
+                    <p>Conduct in front of your webcam!</p>
+                </div>
+                
+                <svg id = "squares" width="520" height="500">
+                  <rect id="rone" x="50" y="80" width="60" height="60"/>
+                  <rect id="rtwo" x="130" y="120" width="100" height="100"/>
+                  <rect id="rthree" x="250" y="80" width="60" height="60"/>
+                  <rect id="rfour" x="330" y="60" width="60" height="60"/>
+                  <rect id="rfive" x="410" y="120" width="100" height="100"/>
+                </svg>
+                <img style="width:500px; padding-top: 450px; left: 8%; position: absolute;" src="assets/logotxt.jpg">
+                
+                
+            </div>
+            
+
+            
+        </div>
+        <div class="gray">
+            <div id="content">
+                Welcome to The Arts Center at NYU Abu Dhabi — a beacon of inspiration at the university where performance, education, and community come together in a vibrant, state of the art setting to enrich the cultural life of both the campus and the city.
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <h1>Orchestra Logo <a href="sketch.js">source</a></h1>
+
+            <p>Threshold: <input type="range" id="thresholdAmount" value="25"></p>
+            <button id="trainer" onclick="start_train()">Collect - Left</button>
+            <button onclick="do_train()">Train</button>
+            <button onclick="start_run()">Run</button>
+            <button onclick="load_models()">Load</button>
+            <button onclick="save_models()">Save Model</button>
+
+            <p>Motion: <span id="motion">0</span></p>
+
+            <p>Direction: <span id="dir">0</span></p>
+            <p>Intensity: <span id="inte">0</span></p>
+        </div>
+        
+        
+        <script src="sketch.js"></script>
+        <script src="https://www.lactame.com/lib/ml/2.2.0/ml.min.js"></script>
+
+    </body>
+
+</html>
