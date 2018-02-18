@@ -146,46 +146,57 @@ function draw() {
         case 0:
             break;
         case 1:
+            console.log("training 0")
             knn_x.push(mysegments);
             knn_y.push(0)
             break;
         case 2:
+            console.log("training 1")
             knn_x.push(mysegments);
             knn_y.push(1)
             break;
         case 3:
+            console.log("training 2")
             knn_x.push(mysegments);
             knn_y.push(2)
             break;
         case 4:
+            console.log("training 3")
             knn_x.push(mysegments);
             knn_y.push(3)
             break;
         case 5:
+            console.log("training 4")
             knn_x.push(mysegments);
             knn_y.push(4)
             break;
         case 6:
+            console.log("training 5")
             knn_x.push(mysegments);
             knn_y.push(5)
             break;
         case 7:
+            console.log("training int 4")
             pr_x.push(total); 
             pr_y.push(4);
             break;
         case 8:
+            console.log("training 3")
             pr_x.push(total); 
             pr_y.push(3); 
             break;
         case 9:
+            console.log("training 2")
             pr_x.push(total); 
             pr_y.push(2); 
             break;
         case 10:
+            console.log("training 1")
             pr_x.push(total); 
             pr_y.push(1); 
             break;
         case 11:
+            console.log("training 0")
             pr_x.push(total); 
             pr_y.push(0);
             break;
@@ -199,14 +210,14 @@ function draw() {
         indx = 0
         for (var pl in players._players){
             if (curr_x == indx){
-                val = players._players[pl].volume.value + Math.log((players._players[pl].volume.value+40)*y_thresh(curr_i))
+                val = players._players[pl].volume.value + 0.1*((players._players[pl].volume.value+5*y_thresh(curr_i)))
             }
             else{
-                val = players._players[pl].volume.value - Math.log10(players._players[pl].volume.value+11)
+                val = players._players[pl].volume.value - 0.1*(players._players[pl].volume.value+9)
             }
             
             players._players[pl].volume.value = val_thresh(val)
-            $('#'+boxes[indx]).attr('y', 175 - 5*players._players[pl].volume.value)
+            $('#'+boxes[indx]).attr('y', 175 - 7*players._players[pl].volume.value)
             $("#dir").html(String(curr_x))
             $("#inte").html(String(curr_i))
             indx ++;
@@ -263,5 +274,5 @@ function y_thresh(y){
     return Math.max(0,Math.min(5,y))*10
 }
 function val_thresh(val){
-    return Math.max(-9,Math.min(30,Math.round(val*100)/100))
+    return Math.max(-9,Math.min(20,Math.round(val*100)/100))
 }
